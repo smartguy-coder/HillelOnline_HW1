@@ -4,9 +4,9 @@ git checkout name - переключитися на бренчу з ім'ям na
 
 git cherry-pick <SHA хеш коміта >   	-       Скопіювати коміт з іншої бренчі	
 git branch -a     			-	Вивести список всіх бренчів на сервері	
-git branch --all | grep feature         -	Вивести список всіх локальних бренчів в іменах яких є слово feature	
-git commit —amend  			-	Відмінити коміт, тобто створити коміт в якому будуть відмінені поперені зміни	
-git merge --abort  			-	Відмінити мердж коміт	
+git branch --list '*feature*'          -	Вивести список всіх локальних бренчів в іменах яких є слово feature	
+git revert HEAD  			-	Відмінити коміт, тобто створити коміт в якому будуть відмінені поперені зміни	
+git reset --merge HEAD~1		-	Відмінити мердж коміт	
 git log  -2	   			-       Показати два останніх коміти з історії	
 git config --global alias.pr 'pull --rebase'  -	Сторити аліас purr яка буде робити pull –rebase	
 git push origin name1:name2		 -	Запушати бренчу name1 на сервер так що на сервері вона мала імя name2	
